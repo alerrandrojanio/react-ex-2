@@ -64,7 +64,7 @@ function App() {
                 <ul>
                   <li>
                     <img src={`${image_path}${movie.poster_path}`} alt="" />
-                    <span>{movie.title}</span>
+                    <p>{movie.title}</p>
                   </li>
                 </ul>
               </div>
