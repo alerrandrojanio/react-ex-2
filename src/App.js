@@ -22,6 +22,8 @@ function App() {
       .then(data => setMovies(data.results))
   }, [])
 
+  console.log({movies});
+
   function handleSearch(e) {
     e.preventDefault();
     

@@ -20,8 +20,8 @@ body {
   opacity: 0.8;
 }
 
-
-.container {
+.btn:active, .btn-primary:active {
+  background-color: #58417D;
 }
 
 .form-group {
@@ -45,29 +45,21 @@ body {
 }
 
 .movie-list {
-  width: 100%;
-  max-width: 1200px;
-  min-width: 200px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 2rem;
-  /* border: 1px solid blue; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
 }
 
 .movie {
-  width: 100%;
-  max-width: 15%;
-  height: 250px;
-  margin-top: 2rem;
-  transform: 1s;
+  position: relative;
+  display: block;
+  height: 102%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
   background: #58417D;
   border-radius: 8px;
-  padding: auto;
-  display: flex;
-  align-items: center;
   padding-top: 1rem;
   padding-right: 1rem;
 }
