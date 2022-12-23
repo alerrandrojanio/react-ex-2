@@ -6,14 +6,16 @@ import {
 } from "react-router-dom";
 
 import Home from './pages/Home';
-import Details from './pages/Details';
+import Filmes from './pages/filmes/Home';
+import Details from './pages/filmes/Details';
 
 export default function Rotas() {
     return (
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/details/:id" element={<Details />} />
+          <Route path="/filmes" element={<Filmes/>} />
+          <Route path="/filmes/details/:id" element={<Details />} />
         </Routes>
       </Router>
     );

@@ -27,6 +27,7 @@ body {
 .form-group {
   width: 100%;
   max-width: 500px;
+  height: 50px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -36,12 +37,12 @@ body {
 
 .form-group input {
   max-width: 450px;
-  transition: box-shadow 0.1s;
-  box-shadow: none;
+  outline: none;
 }
 
 .form-group input:focus {
-  border-color:#58417D;
+  box-shadow: none;
+  border: 2px solid #58417D;
 }
 
 .movie-list {
@@ -52,6 +53,7 @@ body {
 }
 
 .movie {
+  max-width: 270px;
   position: relative;
   display: block;
   height: 102%;  
