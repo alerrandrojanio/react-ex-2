@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 import "./styles.css"
 
-const Home = () => {
+const Movies = () => {
   const [search, setSearch] = useState('');
   const [movies, setMovies] = useState([]); 
 
@@ -79,4 +79,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default Movies;

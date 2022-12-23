@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import Home from './pages/Home';
-import Filmes from './pages/filmes/Home';
+import Filmes from './pages/filmes/Filmes';
 import Details from './pages/filmes/Details';
 
 export default function Rotas() {
@@ -15,7 +15,7 @@ export default function Rotas() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/filmes" element={<Filmes/>} />
-          <Route path="/filmes/details/:id" element={<Details />} />
+          <Route path="/details/:id" element={<Details />} />
         </Routes>
       </Router>
     );

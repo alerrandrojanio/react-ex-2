@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { FiArrowLeft } from 'react-icons/fi';
 
-import "./styles.css"
+import { Container, Title, Span, ContainerPrev, ContainerMovie, Overview } from "./styles";
 
 const Details = () => {
   const { id } = useParams();
@@ -20,23 +21,25 @@ const Details = () => {
   }, [])
   
   return (
-    <div className="App">
-      <h1 className="mt-3">{title}</h1>
-      <h1>Pagina</h1>
-      <Link to={'/'}>Voltar</Link>
-      <div className="container">
+    <Container>
+      <Title>{title}</Title>
+      <ContainerPrev>
+        <Link to={'/filmes'} style={{ textDecoration: 'none', color: 'white' }}>
+          <FiArrowLeft color="#FFF" size={'18px'} />
+          <Span>Voltar</Span>
+        </Link>
+      </ContainerPrev>
+      
+      <ContainerMovie>
         <img src={`${image_path}${movie.poster_path}`} alt={`Poster do filme ${movie.title}`} />
-        <div className="details">
-          <h2>{movie.title}</h2>
-          <p className="date">{movie.release_date}</p>
-          <p className="overview">{movie.overview}</p>
-        </div>
-      </div>
-      
-
-      
-    </div>
-    
+          <Overview>
+            <h2>{movie.title}</h2>
+            <p className="date" style={{ color: '#C0C0C0' }}>Data de Lançamento: {movie.release_date}</p>
+            <p>Sinopse:</p>
+            <p className="overview">{movie.overview}</p>
+          </Overview>
+      </ContainerMovie>
+    </Container>
   )
 }
 

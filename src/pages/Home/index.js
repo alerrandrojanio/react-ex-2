@@ -1,7 +1,18 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 
-export default function index() {
+import {  } from 'react-icons/fi'
+import { Link } from "react-router-dom"
+
+import { Title } from "./styles"
+
+const Home = () => {
+  const title = process.env.REACT_APP_TITLE_BOOKS;
+  
   return (
-    <div>index</div>
-  )
+    <Title>
+      {title}
+    </Title>
+  );
 }
+
+export default Home;
