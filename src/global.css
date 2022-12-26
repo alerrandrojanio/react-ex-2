@@ -1,0 +1,26 @@
+body {
+  font: 400 14px Roboto, sans-serif;
+  background-color: #121214;
+  color: #FFF;
+}
+
+.btn-primary {
+  background: #58417D;
+  border: #58417D;
+  transition: background-color 0.2s;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #58417D;
+  opacity: 0.8;
+}
+
+.btn:active, .btn-primary:active {
+  background-color: #58417D;
+}
+
+.form-group input:focus {
+  box-shadow: none;
+  border: 2px solid #58417D;
+}

@@ -38,25 +38,6 @@ export const Input = styled.input`
   outline: none;
 `;
 
-export const BookList = styled.div`
-  display: grid;
-  width: 95%;
-  max-width: 100rem;
-  min-width: 5rem;
-  margin-left: 1rem;
-`;
-
-export const Book = styled.div`
-  background-color: #58417D;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-
-  li {
-    list-style: none;
-  }
-`;
-
 export const Paragraph = styled.p`
   display: flex;
   gap: 1rem;
@@ -71,3 +52,51 @@ export const Span = styled.span`
   margin-left: 4px;
 `;
 
+export const MovieContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  align-content: center;
+  margin: 2rem
+`;
+
+export const Movie = styled.div`
+  max-width: 270px;
+  position: relative;
+  display: block;
+  height: 102%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+  background: #58417D;
+  border-radius: 8px;
+  padding-top: 1rem;
+  padding-right: 1rem;
+
+  img {
+    width: 120px;
+    cursor: pointer;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    transition: width 0.2s;
+    margin-left: 15px;
+  }
+
+  img:hover{
+    width: 130px;
+    
+  }
+
+  p {
+    text-transform: capitalize;
+    height: 20px;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    list-style-type: none;
+    
+  }
+`;

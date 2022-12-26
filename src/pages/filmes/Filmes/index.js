@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
-import { FiSearch } from 'react-icons/fi'
+import { FiSearch, FiArrowLeft } from 'react-icons/fi'
 import { Link } from "react-router-dom"
 
-import "./styles.css"
+
+import { Title, LinkContainer, InputContainer, Input, Span, MovieContainer, Movie } from "./styles"
 
 const Movies = () => {
   const [search, setSearch] = useState('');
@@ -43,10 +44,20 @@ const Movies = () => {
   }
 
   return (
-    <div className="App">
-      <h1 className="mt-3">{title}</h1>
-      <div className='form-group'>
-        <input
+    <>
+      <Title>
+        {title}
+      </Title>
+      
+      <LinkContainer>
+        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>
+          <FiArrowLeft color="#FFF" size={'18px'} />
+          <Span>Livros</Span> 
+        </Link>
+      </LinkContainer>
+      
+      <InputContainer className='form-group'>
+        <Input
           type="text"
           className='form-control'
           value={search}
@@ -55,27 +66,60 @@ const Movies = () => {
         <button type="submit" className='btn btn-primary' onClick={handleSearch}>
           <FiSearch color="#FFF" />
         </button>
-      </div>
+      </InputContainer>
+
+      <MovieContainer>
+        {movies.map(movie => {
+          return (
+            <Movie>
+              <ul>
+                <li>
+                  <Link to={`/details/${movie.id}`}>
+                    <img src={`${image_path}${movie.poster_path}`} alt="" />
+                  </Link>
+                  <p>{movie.title}</p>
+                </li>
+              </ul>
+            </Movie>
+          )
+        })}
+      </MovieContainer>
+    </>
+    
+    
+    // <div className="App">
+    //   <h1 className="mt-3">{title}</h1>
+    //   <div className='form-group'>
+    //     <input
+    //       type="text"
+    //       className='form-control'
+    //       value={search}
+    //       onChange={e => setSearch(e.target.value)}
+    //     />
+    //     <button type="submit" className='btn btn-primary' onClick={handleSearch}>
+    //       <FiSearch color="#FFF" />
+    //     </button>
+    //   </div>
       
-      <div className="container">
-        <div className="movie-list">
-          {movies.map(movie => {
-            return (
-              <div className="movie">
-                <ul>
-                  <li>
-                    <Link to={`/details/${movie.id}`}>
-                      <img src={`${image_path}${movie.poster_path}`} alt="" />
-                    </Link>
-                    <p>{movie.title}</p>
-                  </li>
-                </ul>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </div>
+    //   <div className="container">
+    //     <div className="movie-list">
+    //       {movies.map(movie => {
+    //         return (
+    //           <div className="movie">
+    //             <ul>
+    //               <li>
+    //                 <Link to={`/details/${movie.id}`}>
+    //                   <img src={`${image_path}${movie.poster_path}`} alt="" />
+    //                 </Link>
+    //                 <p>{movie.title}</p>
+    //               </li>
+    //             </ul>
+    //           </div>
+    //         )
+    //       })}
+    //     </div>
+    //   </div>
+    // </div>
   );
 }
 

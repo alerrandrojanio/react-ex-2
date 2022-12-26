@@ -6,6 +6,35 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+`;
+
+export const LinkContainer = styled.div`
+  width: 100%;
+  max-width: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1rem;
+  text-decoration: none;
+`;
+
+export const InputContainer = styled.div`
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  gap: 1rem;
+`;
+
+export const Input = styled.input`
+
 `;
 
 export const Span = styled.span`
@@ -13,15 +42,6 @@ export const Span = styled.span`
   color: #FFF;
   font-size: 16px;
   margin-left: 4px;
-`;
-
-export const ContainerPrev = styled.div`
-  width: 100%;
-  max-width: 80px;
-  display: flex;
-  justify-content: space-between;
-  margin-left: 1rem;
-  text-decoration: none;
 `;
 
 export const ContainerMovie = styled.div` 

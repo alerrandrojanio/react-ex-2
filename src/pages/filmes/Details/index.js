@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FiArrowLeft } from 'react-icons/fi';
 
-import { Container, Title, Span, ContainerPrev, ContainerMovie, Overview } from "./styles";
+import { Container, Title, Span, LinkContainer, ContainerMovie, Overview } from "./styles";
 
 const Details = () => {
   const { id } = useParams();
@@ -23,12 +23,12 @@ const Details = () => {
   return (
     <Container>
       <Title>{title}</Title>
-      <ContainerPrev>
+      <LinkContainer>
         <Link to={'/filmes'} style={{ textDecoration: 'none', color: 'white' }}>
           <FiArrowLeft color="#FFF" size={'18px'} />
           <Span>Voltar</Span>
         </Link>
-      </ContainerPrev>
+      </LinkContainer>
       
       <ContainerMovie>
         <img src={`${image_path}${movie.poster_path}`} alt={`Poster do filme ${movie.title}`} />
