@@ -1,14 +1,14 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Container = styled.div`
   text-align: center;
-`;
+`
 
 export const Title = styled.h1`
   margin-top: 1rem;
   text-align: center;
   margin-bottom: 2rem;
-`;
+`
 
 export const LinkContainer = styled.div`
   width: 100%;
@@ -17,7 +17,20 @@ export const LinkContainer = styled.div`
   justify-content: space-between;
   margin-left: 1rem;
   text-decoration: none;
-`;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &:hover {
+    a {
+      color: #58417d;
+    }
+  }
+`
 
 export const InputContainer = styled.div`
   width: 100%;
@@ -31,20 +44,15 @@ export const InputContainer = styled.div`
   margin-bottom: 2rem;
   padding: 1rem;
   gap: 1rem;
-`;
+`
 
-export const Input = styled.input`
-
-`;
+export const Input = styled.input``
 
 export const Span = styled.span`
-  font-size: 18px;
-  color: #FFF;
-  font-size: 16px;
   margin-left: 4px;
-`;
+`
 
-export const ContainerMovie = styled.div` 
+export const ContainerMovie = styled.div`
   width: 100%;
   max-width: 900px;
   display: flex;
@@ -56,8 +64,7 @@ export const ContainerMovie = styled.div`
     height: 500px;
     border-radius: 8px;
   }
-
-`;
+`
 
 export const Overview = styled.div`
   h2 {
@@ -68,10 +75,9 @@ export const Overview = styled.div`
     margin-top: 1rem;
   } */
 
-  p {  
+  p {
     text-align: left;
     margin-left: 1rem;
     margin-right: 1rem;
   }
-`;
-
+`
